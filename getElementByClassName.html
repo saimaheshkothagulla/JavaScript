@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom manipulations</title>
+</head>
+<body>
+<script>
+    function buttonclick() {
+        var para=document.getElementsByClassName('my');
+        for(var x=0;x<para.length;x++){
+            para[x].style.color='red'
+        }
+
+    }
+</script>
+
+<p class="my">1st paragraph</p>
+<p>2st paragraph</p>
+<p class="my">3st paragraph</p>
+<button onclick="buttonclick()">clickhere</button>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zoomin/zoomout</title>
+</head>
+<body>
+<img id="img1" onmouseover="mouseover()" onmouseout="mouseout()" src="maheshbabu12.jpg" width="200">
+
+</body>
+<script>
+     var id=0;
+    var diff=10;
+  var size=0;
+    function mouseover() {
+                 id=window.setInterval(increase,100)
+    }
+    function mouseout() {
+        id=window.setInterval(decrease,100)
+
+    }
+    function increase() {
+        size=Number(document.getElementById('img1').width)
+        if(size<300)
+        {
+            size=size+diff
+            document.getElementById('img1').width=size
+
+        }
+        else {
+            window.clearInterval(id)
+        }
+    }
+
+    function decrease() {
+        size=Number(document.getElementById('img1').width)
+
+        if(size>200)
+        {
+            size=size-diff
+            document.getElementById('img1').width=size
+        }
+        else {
+            window.clearInterval(id)
+        }
+
+    }
+</script>
+</html>

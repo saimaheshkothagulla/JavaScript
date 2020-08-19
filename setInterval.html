@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>setInterval/clearInterval</title>
+</head>
+<body>
+<script>
+    var id=0;
+    var seconds=0;
+    function mytext() {
+        document.getElementById('text1').innerHTML=seconds+' seconds';
+        seconds++;
+    }
+
+    function start(){
+        id=window.setInterval(mytext,1000);
+    }
+    function stop(){
+        window.clearInterval(id);
+    }
+</script>
+<center>
+    <form>
+
+<button type="button"  onclick="start()">start</button><br><br>
+<h3 id="text1">no text</h3><br>
+<button type="button"  onclick="stop()">stop</button>
+
+    </form>
+</center>
+</body>
+</html>

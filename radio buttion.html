@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom manipulations</title>
+</head>
+<body>
+<script>
+function  buttonclick() {
+var rd1=document.getElementById('rd1');
+var rd2=document.getElementById('rd2');
+if(rd1.checked==true)
+{
+    alert(rd1.value)
+}
+if(rd2.checked==true)
+{
+    alert(rd2.value)
+}
+else
+    alert('no group is selected')
+}
+</script>
+
+<input id="rd1" name='group' type="radio" value="cse">cse</input>
+<br>
+<input id='rd2' name='group' type="radio" value="it">it</input>
+<br>
+ <button onclick="buttonclick()"> click here</button>
+
+</body>
+</html>

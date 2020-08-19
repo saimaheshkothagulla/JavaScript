@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>constructer</title>
+</head>
+<body>
+<script>
+    function cars(brand,model,price) {
+        this.brand=brand
+        this.model=model
+        this.price=price
+        this.automated=function () {
+            document.write('it contains the automated features')
+
+        }
+
+
+    }
+    var car1=new cars('bmw','model1',3000000)
+    car1.automated()
+
+</script>
+</body>
+</html>

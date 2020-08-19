@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mouse events on header tags</title>
+</head>
+<body>
+<div>
+<h1 id='one' onmouseover="mouseover1()" onmouseout="mouseout1()">h1 tag</h1>
+<h2 id="two" onmouseover="mouseover2()" onmouseout="mouseout2()">h2 tag</h2>
+<h3 id='three' onmouseover="mouseover3()" onmouseout="mouseout3()">h3 tag</h3>
+</div>
+</body>
+<script>
+    var one=document.getElementById('one')
+    var two=document.getElementById('two')
+    var three=document.getElementById('three')
+    function mouseover1() {
+        one.textContent='mouse on me'
+        one.style.color='red'
+    }
+    function mouseout1() {
+       one.textContent='h1 tag'
+        one.style.color='black'
+    }
+    function mouseover2() {
+        two.textContent='mouse on me'
+        two.style.color='red'
+    }
+    function mouseout2() {
+       two.textContent='h2 tag'
+        two.style.color='black'
+    }
+    function mouseover3() {
+        three.textContent='mouse on me'
+        three.style.color='red'
+    }
+    function mouseout3() {
+       three.textContent='h3 tag'
+        three.style.color='black'
+    }
+</script>
+</html>

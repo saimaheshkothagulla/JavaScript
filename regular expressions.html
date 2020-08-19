@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<script>
+    function validate() {
+
+
+    var user=document.getElementById('user').value;
+
+    var reg=/[a-z]ahesh/i;
+    if(reg.test(user))
+    {
+        document.getElementById('invalidlabel2').style.visibility='visible'
+        document.getElementById('invalidlabel1').style.visibility='hidden'
+        return false
+
+    }
+    else
+        document.getElementById('invalidlabel1').style.visibility='visible'
+        document.getElementById('invalidlabel2').style.visibility='hidden'
+        return false
+     }
+
+</script>
+<body>
+    <form onsubmit=" return validate()" >
+        <input id='user' type="text" placeholder="username">
+        <label id="invalidlabel1" style="visibility: hidden">invalid username</label>
+        <label id="invalidlabel2" style="visibility: hidden">valid username</label><br><br>
+        <button type="submit"  >submit</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>setTimeout/clearTimeout</title>
+</head>
+<body>
+<script>
+    var id=0;
+    function mytext() {
+        document.getElementById('text1').innerHTML='executed  after 5seconds';
+
+    }
+
+    function start(){
+        id=window.setTimeout(mytext,5000);
+    }
+    function stop(){
+        window.clearTimeout(id);
+    }
+</script>
+<center>
+    <form>
+
+<button type="button"  onclick="start()">start</button><br><br>
+<h3 id="text1">no text</h3><br>
+<button type="button"  onclick="stop()">stop</button>
+
+    </form>
+</center>
+</body>
+</html>

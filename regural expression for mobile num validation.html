@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mobile number validation</title>
+</head>
+<script>
+    function validate() {
+
+
+    var user=document.getElementById('user').value;
+
+    var reg=/^[7-9][0-9]{9}$/;
+    //var reg=/^[7-9]/d{9}$/
+    if(reg.test(user))
+    {
+        document.getElementById('invalidlabel1').innerHTML='Valid'
+        document.getElementById('invalidlabel1').style.visibility='visible'
+        document.getElementById('invalidlabel1').style.color='green'
+        return false
+
+    }
+    else
+        document.getElementById('invalidlabel1').innerHTML='InValid'
+        document.getElementById('invalidlabel1').style.visibility='visible'
+        document.getElementById('invalidlabel1').style.color='red'
+        return false
+     }
+
+</script>
+<body>
+    <form onsubmit=" return validate()" >
+        <input id='user' type="text" placeholder="mobile number">
+        <label id="invalidlabel1" style="visibility: hidden">valid</label><br><br>
+        <button type="submit"  >submit</button>
+    </form>
+
+</body>
+</html>

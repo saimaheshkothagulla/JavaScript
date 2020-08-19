@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>email validation</title>
+</head>
+<script>
+    function validate() {
+
+
+    var user=document.getElementById('user').value;
+
+    var reg=/([a-zA-Z0-9 \._]{6,20})@([a-z]+).([a-z]+)(.[a-z]+)?/;
+    //var reg=/^[7-9]/d{9}$/
+    if(reg.test(user))
+    {
+        document.getElementById('invalidlabel1').innerHTML='Valid'
+        document.getElementById('invalidlabel1').style.visibility='visible'
+        document.getElementById('invalidlabel1').style.color='green'
+        return true
+
+    }
+    else
+        document.getElementById('invalidlabel1').innerHTML='InValid'
+        document.getElementById('invalidlabel1').style.visibility='visible'
+        document.getElementById('invalidlabel1').style.color='red'
+        return false
+     }
+
+</script>
+<body>
+    <form onsubmit=" return validate()" >
+        <input id='user' type="text" placeholder="email">
+        <label id="invalidlabel1" style="visibility: hidden">valid</label><br><br>
+        <button type="submit"  >submit</button>
+    </form>
+
+</body>
+</html>

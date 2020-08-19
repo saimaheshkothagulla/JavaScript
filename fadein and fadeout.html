@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fadein and fadeout</title>
+</head>
+<body>
+<h1 id="head1">javaScript</h1>
+<button onclick="fadein()" >fadein</button><br>
+<button onclick="fadeout()" >fadeout</button>
+</body>
+<script>
+    var id=0;
+   var opa=0
+    function fadein() {
+        id=window.setInterval(infade,100)
+
+    }
+    function fadeout() {
+        id=window.setInterval(outfade,100)
+
+    }
+    function infade() {
+        var img=document.getElementById('head1')
+        opa=Number(window.getComputedStyle(img).getPropertyValue('opacity'))
+         if(opa<1)
+        {
+            opa=opa+0.1;
+            img.style.opacity=opa;
+        }
+        else
+        {
+            window.clearInterval(id)
+        }
+
+    }
+    function outfade() {
+        var img=document.getElementById('head1')
+        opa=Number(window.getComputedStyle(img).getPropertyValue('opacity'))
+         if(opa>0)
+        {
+            opa=opa-0.1;
+            img.style.opacity=opa;
+        }
+        else
+        {
+            window.clearInterval(id)
+        }
+
+    }
+
+
+</script>
+</html>

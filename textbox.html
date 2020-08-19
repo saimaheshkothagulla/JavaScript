@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom manipulations</title>
+</head>
+<body>
+<script>
+function  buttonclick() {
+    var str1 = document.getElementById('text1').value;
+    var str2 = document.getElementById('text2').value;
+    if (str1 ==='mahesh' && str2 === 'abcd123'){
+    alert('valid user');
+        }
+    else{alert('invalid user')}
+
+
+}
+</script>
+<input type="text" id="text1" placeholder="user name">
+<br>
+<br>
+<input type="password" id="text2" placeholder="password">
+
+ <button onclick="buttonclick()"> click here</button>
+
+</body>
+</html>

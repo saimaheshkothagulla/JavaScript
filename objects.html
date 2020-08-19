@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>objects</title>
+</head>
+<body>
+<script>
+    var car={
+        brand:'bwm',
+        model:'model1',
+        price:'1cr',
+        automated:function () {
+            document.write('it contains the automated features');
+
+        }
+    }
+
+    car.automated()
+    car.speed=300
+    document.write(car.speed);
+    delete car.speed
+    document.write(car.speed);
+</script>
+</body>
+</html>

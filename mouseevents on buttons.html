@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mouse events on buttons</title>
+</head>
+<script>
+    function mouseover() {
+        document.getElementById('buu').textContent='click'
+        document.getElementById('buu').style.color='red'
+
+    }
+    function mouseout() {
+        document.getElementById('buu').style.color='black'
+        document.getElementById('buu').textContent='click here'
+
+    }
+</script>
+<body>
+<button id="buu" onmouseover="mouseover()"  onmouseout="mouseout()" value="click here">click here</button>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fade in/out animation</title>
+</head>
+<body>
+<script>
+    var id=0;
+    var opacity=0;
+    function fadeout() {
+        id=window.setInterval(hide,1000)
+    }
+    function fadein() {
+           id=window.setInterval(show,1000)
+    ``}
+    function hide() {
+        var image=document.getElementById('image')
+        opacity=Number(window.getComputedStyle(image).getPropertyValue('opacity'))
+        if(opacity>0){
+            opacity=opacity-0.1;
+            image.style.opacity=opacity;
+        }
+        else
+        {
+            window.clearInterval(id)
+        }
+    }
+    function show() {
+        var image=document.getElementById('image')
+        opacity=Number(window.getComputedStyle(image).getPropertyValue('opacity'))
+        if(opacity<1){
+            opacity=opacity+0.1;
+            image.style.opacity=opacity;
+        }
+        else
+        {
+            window.clearInterval(id)
+        }
+
+    }
+
+</script>
+<center>
+    <button type="button" onclick="fadeout()" style="size: 500px">fadeout</button><br><br>
+    <img  id="image" src="maheshbabu.jpg"  width="1080"><br><br>
+    <button type="button" onclick="fadein()">fadein</button>
+</center>
+</body>
+</html>

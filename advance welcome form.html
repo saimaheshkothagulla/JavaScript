@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+<script>
+function validation() {
+    var username=document.getElementById('user')
+    var password=document.getElementById('pass')
+    if(username.value.trim()==''){
+        username.style.border='solid 3px red'
+        document.getElementById('userlabel').style.visibility='visible'
+        return false;
+    }
+    else if(password.value.trim()==''){
+        password.style.border='solid 3px red'
+        document.getElementById('passlabel').style.visibility='visible'
+        return false;
+    }
+    else if(password.value.length<=6){
+      password.style.border='solid 3px red'
+        document.getElementById('passlength').style.visibility='visible'
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+
+}
+</script>
+<body>
+<center>
+    <form onsubmit="return validation()" action="welcome.html">
+        <input type="text" placeholder="username" id="user">
+        <label id="userlabel" style="color: red;visibility: hidden">invalid</label><br><br>
+        <input type="password" placeholder="password" id="pass" >
+        <label id="passlabel" style="color: red;visibility: hidden">invalid</label><br><br>
+        <label id="passlength" style="color: red;visibility: hidden">weak password</label><br><br>
+        <button type="submit">submit</button>
+    </form>
+</center>
+</body>
+</html>

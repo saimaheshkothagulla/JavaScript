@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>evennts on mouse</title>
+</head>
+<script>
+//mouse over and mouse out events
+    function setnew() {
+        document.getElementById('imgtag').src='maheshbabu.jpg'
+
+    }
+    function setold() {
+        document.getElementById('imgtag').src='maheshbabu12.jpg'
+
+    }
+
+</script>
+<body>
+<img id='imgtag' onmouseover="setnew()" onmouseout="setold()" src="maheshbabu12.JPG" width="500">
+</body>
+</html>

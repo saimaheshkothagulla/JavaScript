@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<script>
+    function validate() {
+
+
+    var user=document.getElementById('user')
+    var pass=document.getElementById('pass')
+    if(user.value.trim()==""|| pass.value.trim()==""){
+        alert('fill the form completly')
+        return false
+    }
+    else
+     return true
+     }
+
+</script>
+<body>
+    <form action="welcome.html" onsubmit="return validate()">
+        <input id='user' type="text" placeholder="username"><br><br>
+        <input id='pass' type="password" placeholder="password"><br><br>
+        <button type="submit">submit</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>adding two numbers</title>
+</head>
+<body>
+<script>
+    function addvalues(){
+        var a=document.getElementById('value1').value;
+        var b=document.getElementById('value2').value;
+        document.getElementById('adding').innerHTML='result='+(a+b);
+    }
+</script>
+<center>
+    <form >
+
+
+    <input type="text" placeholder="value1" id="value1"><br>
+    <input type="text" placeholder="value2" id="value2"><br>
+    <button type="button" onclick="addvalues()">submit</button>
+
+    </form>
+    <h3 id="adding">result=</h3>
+</center>
+</body>
+</html>
